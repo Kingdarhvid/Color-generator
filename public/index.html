@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Color picker</title>
+</head>
+<body class="h-screen bg-white dark:bg-slate-800">
+<header class="">
+    <div class="py-4 px-6">
+        <div class="flex justify-between gap-4">
+            <input class="w-16 h-16" type="color" name="" id="color">
+            <select class="w-1/2 text-xl py-2 border-gray-300 border border-solid rounded-md " name="color-style" id="color-mode">
+                <option  value="Monochrome">Monochrome</option>
+                <option value="Monochrome-dark">Monochrome-dark</option>
+                <option value="Monochrome-light">Monochrome-light</option>
+                <option value="Analogic">Analogic</option>
+                <option value="Complement">Complement</option>
+                <option value="Analogic-complement">Analogic-complement</option>
+                <option value="Triad">Triad</option>
+            </select>
+            <button id="color-btn" class="border-gray-300 border border-solid w-auto p-2 text-sm rounded-md dark:text-white">Get Color Scheme</button>
+        </div>
+    </div>
+</header>
+<main class="px-6 h-full">
+    <div id="color-container" class="flex w-full h-3/4 ">
+        <div class="w-full h-full color" id="color-seed"></div>
+        <div class="w-full h-full color" id="color-1"></div>
+        <div class="w-full h-full color" id="color-2"></div>
+        <div class="w-full h-full color" id="color-3"></div>
+        <div class="w-full h-full color" id="color-4"></div>
+        <!-- color schemes -->
+    </div>
+    <div id="hex-container" class="flex w-full text-center  dark:text-white">
+        <div class="w-full" id="hex-seed"></div>
+        <div class="w-full" id="hex-1"></div>
+        <div class="w-full" id="hex-2"></div>
+        <div class="w-full" id="hex-3"></div>
+        <div class="w-full" id="hex-4"></div>
+    </div>
+</main>  
+    <script src="./index.js" type="module"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+<!-- npx tailwindcss -i ./src/input.css -o ./public/css/style.css --watch -->
